@@ -1,15 +1,12 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
+import {TOKEN as token} from '@env';
 
 export type QueryDataType = {
 	userId?: string;
 	gradeId?: string;
 	subjectId?: string;
 	lessonId?: string;
-	token?: string;
 };
-
-const token =
-	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVkYzYyY2MxYWEwMDc4MDAwZjljMDEiLCJpYXQiOjE3MTM3MzQxOTh9.2ZIPdqfGIEbm0t6iSE14HTQw1ASehe_hijG_iEnWFJU';
 
 export const apis = createApi({
 	reducerPath: 'corrsyAPI',
