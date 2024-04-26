@@ -2,13 +2,21 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
 	nameObj: {name: 'kaz'},
-	locale: 'ar',
+	locale: 'en',
 };
 
 const corrsySlice = createSlice({
 	name: 'corrsy',
 	initialState,
 	reducers: {
+		changeLocale: (state, action) => {
+			switch (action.type) {
+				case 'corrsy/changeLocale':
+					return {...state, locale: action.payload || 'en'};
+				default:
+					return state;
+			}
+		},
 		changeName: (state, action) => {
 			switch (action.type) {
 				case 'corrsy/changeName':
@@ -20,5 +28,5 @@ const corrsySlice = createSlice({
 	},
 });
 
-export const {changeName} = corrsySlice.actions;
+export const {changeName, changeLocale} = corrsySlice.actions;
 export default corrsySlice.reducer;

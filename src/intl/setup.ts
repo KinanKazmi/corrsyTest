@@ -1,5 +1,4 @@
 import I18n from 'react-native-i18n';
-// import {Platform, NativeModules} from 'react-native';
 
 I18n.fallbacks = true;
 I18n.translations = {
@@ -7,8 +6,9 @@ I18n.translations = {
 	ar: require('./ar.json'),
 };
 
-I18n.locale = 'ar';
+I18n.locale = 'en';
 
+// To select phone locale on startup
 // I18n.locale =
 // 	Platform.OS === 'ios'
 // 		? NativeModules.SettingsManager.settings.AppleLocale
