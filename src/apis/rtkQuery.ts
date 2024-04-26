@@ -1,5 +1,5 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import {TOKEN as token} from '@env';
+import {TOKEN as token, BASE_URL as baseUrl} from '@env';
 
 export type QueryDataType = {
 	userId?: string;
@@ -11,7 +11,7 @@ export type QueryDataType = {
 export const apis = createApi({
 	reducerPath: 'corrsyAPI',
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'https://lessonapi.educationforalliraqis.com/',
+		baseUrl,
 		prepareHeaders: headers => {
 			headers.set('authorization', `Bearer ${token}`);
 			return headers;

@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {RootState} from '../../redux/store';
 import {changeName} from '../../redux/corrsyReducer';
 import {useFetchSubjectsQuery} from '../../apis/rtkQuery';
-import {USER_ID as userId, GRADE_ID as gradeId, TOKEN as token} from '@env';
+import {USER_ID as userId, GRADE_ID as gradeId} from '@env';
 
 const Home = () => {
 	const nameData = useSelector(
