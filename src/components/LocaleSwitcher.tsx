@@ -22,14 +22,18 @@ const LocaleSwitcher = () => {
 
 	return (
 		<View style={styles.switchContainer}>
-			<Text>{languages[locale]}</Text>
+			<Text style={styles.localeText}>{languages[locale]}</Text>
 			<Switch onValueChange={toggleLang} value={locale === Languages.arabic} />
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
+	localeText: {
+		marginRight: 5,
+	},
 	switchContainer: {
+		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},

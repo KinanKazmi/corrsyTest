@@ -1,15 +1,16 @@
+import 'react-native-gesture-handler';
 import React from 'react';
+import './src/intl/languageSetup';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import {routes} from './src/routes/routes';
-import './src/intl/setup';
 import store from './src/redux/store';
 
 function App(): React.JSX.Element {
 	return (
-		<NavigationContainer>
-			<Provider store={store}>{routes}</Provider>
-		</NavigationContainer>
+		<Provider store={store}>
+			<NavigationContainer>{routes}</NavigationContainer>
+		</Provider>
 	);
 }
 

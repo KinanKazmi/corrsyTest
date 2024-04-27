@@ -11,6 +11,7 @@ import {
 	useSafeAreaFrame,
 	useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import {transparentWhite, loaderColor} from '../utils/appColors';
 const {width, height} = Dimensions.get('window');
 
 const FullScreenLoader = ({loading}: {loading?: boolean}) => {
@@ -23,7 +24,7 @@ const FullScreenLoader = ({loading}: {loading?: boolean}) => {
 	return (
 		<View style={[styles.loaderContainer, {height: height - headerHeight}]}>
 			<Text>Loading ... </Text>
-			<ActivityIndicator size={'large'} color={'skyblue'} />
+			<ActivityIndicator size={'large'} color={loaderColor} />
 		</View>
 	);
 };
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
 		width: width,
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: 'rgba(255,255,255,0.9)',
+		backgroundColor: transparentWhite,
 	},
 });
 

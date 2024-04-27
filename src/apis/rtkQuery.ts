@@ -1,5 +1,9 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {TOKEN as token, BASE_URL as baseUrl} from '@env';
+import {
+	ChatpersResponseType,
+	SubjectResponseType,
+} from '../types/apiResponseTypes';
 
 export type QueryDataType = {
 	userId?: string;
@@ -18,10 +22,10 @@ export const apis = createApi({
 		},
 	}),
 	endpoints: builder => ({
-		fetchSubjects: builder.query<unknown, QueryDataType>({
+		fetchSubjects: builder.query<SubjectResponseType, QueryDataType>({
 			query: data => `courseregistration/${data.userId}/${data.gradeId}`,
 		}),
-		fetchChapters: builder.query<unknown, QueryDataType>({
+		fetchChapters: builder.query<ChatpersResponseType, QueryDataType>({
 			query: data => `lessons/subject/${data.subjectId}`,
 		}),
 		fetchLesson: builder.query<unknown, QueryDataType>({

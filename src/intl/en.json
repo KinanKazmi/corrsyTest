@@ -1,3 +1,17 @@
 {
-  "greeting": "Hello, {{name}}!"
+  "greeting": "Hello, {{name}}!",
+	"Math": "Math",
+	"English": "English",
+	"Algebra": "Algebra",
+	"Pronouns": "Pronouns",
+	"Summary": "Summary",
+	"beginner": "beginner",
+	"A + B": "A + B",
+	"Basic arithmetic": "Basic arithmetic",
+	"He, she, it": "He, she, it",
+	"The meaning of he, she, it": "The meaning of he, she, it",
+	"intermediate": "intermediate",
+	"His, her, its": "His, her, its",
+	"Learning about possessive pronouns": "Learning about possessive pronouns",
+	"Object pronouns": "Object pronouns"
 }

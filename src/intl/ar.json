@@ -1,3 +1,17 @@
 {
-  "greeting": "! {{name}} مرحبًا"
+  "greeting": "! {{name}} مرحبًا",
+	"Math": "الرياضيات",
+	"English": "إنجليزي",
+	"Algebra": "الجبر",
+	"Pronouns": "الضمائر",
+	"Summary": "ملخص",
+	"beginner": "مبتدئ",
+	"A + B": "أ + ب",
+	"Basic arithmetic": "الحساب الأساسي",
+	"He, she, it": "ضمير الغائب",
+	"The meaning of he, she, it": "معنى هو، هي، هو",
+	"intermediate": "متوسط",
+	"His, her, its": "له لها له",
+	"Learning about possessive pronouns": "التعرف على ضمائر الملكية",
+	"Object pronouns": "أسماء المفعول"
 }

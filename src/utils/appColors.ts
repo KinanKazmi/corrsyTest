@@ -1,0 +1,11 @@
+export const bgTop = 'skyblue';
+export const bgBottom = 'purple';
+export const textError = 'red';
+export const transparentWhite = 'rgba(255,255,255,0.9)';
+export const loaderColor = 'skyblue';
+export const subjectButtonTop = 'lime';
+export const subjectButtonBottom = 'skyblue';
+export const chapterButtonTop = 'mediumpurple';
+export const chapterButtonBottom = 'skyblue';
+export const lessonButtonTop = 'hotpink';
+export const lessonButtonBottom = 'skyblue';
