@@ -1,8 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit';
+import I18n from 'react-native-i18n';
+import {App_Languages as Languages} from '../utils/data';
 
 const initialState = {
 	nameObj: {name: 'kaz'},
-	locale: 'en',
+	locale: Languages.english,
 };
 
 const corrsySlice = createSlice({
@@ -12,7 +14,9 @@ const corrsySlice = createSlice({
 		changeLocale: (state, action) => {
 			switch (action.type) {
 				case 'corrsy/changeLocale':
-					return {...state, locale: action.payload || 'en'};
+					const newLocale = action.payload || Languages.english;
+					I18n.locale = newLocale;
+					return {...state, locale: newLocale};
 				default:
 					return state;
 			}

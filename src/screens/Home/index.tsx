@@ -2,7 +2,7 @@ import React from 'react';
 import {useColorScheme} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import {RootState} from '../../redux/store';
-import {changeName, changeLocale} from '../../redux/corrsyReducer';
+import {changeName} from '../../redux/corrsyReducer';
 import {useFetchSubjectsQuery} from '../../apis/rtkQuery';
 import {USER_ID as userId, GRADE_ID as gradeId} from '@env';
 import HomeUI from './HomeUI';
@@ -18,10 +18,6 @@ const Home = () => {
 	console.log('namedata', stateData);
 	console.log('data', data);
 
-	const toggleLang = () => {
-		dispatch(changeLocale(stateData.locale === 'ar' ? 'en' : 'ar'));
-	};
-
 	const changeUserName = (name: string) => {
 		dispatch(changeName(name));
 	};
@@ -31,8 +27,6 @@ const Home = () => {
 			isDarkMode={isDarkMode}
 			userName={stateData.nameObj.name}
 			changeUserName={changeUserName}
-			lang={stateData.locale}
-			toggleLang={toggleLang}
 		/>
 	);
 };
