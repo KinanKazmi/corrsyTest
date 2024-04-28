@@ -56,3 +56,43 @@ export type LessonType = {
 	subject: string;
 	title: string;
 };
+
+export type LessonDetailResponseType = {
+	data: LessonDetailResponseDataType[];
+	message: string;
+};
+
+export type LessonDetailResponseDataType = {
+	_id: string;
+	title: string;
+	shortDescription: string;
+	longDescription: string;
+	realLifeScenario: string;
+	lessonIcon: string;
+	level: string;
+	grade: string;
+	subject: string;
+	chapter: string;
+	isActive: boolean;
+	widgets: LessonWidgetDataType[];
+	isPaid: boolean;
+	price: number;
+	lessonNumber: number;
+	createdAt: string;
+	updatedAt: string;
+};
+
+export type LessonWidgetDataType = {
+	widgetType: string;
+	content: LessonWidgetContentType;
+	isActive: boolean;
+	_id: string;
+};
+
+export type LessonWidgetContentType = {
+	contentType: string;
+	contentTitle: string;
+	image: string;
+	fileUrl: string;
+	description: string;
+};

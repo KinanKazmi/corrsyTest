@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {useFetchSubjectsQuery} from '../../apis/rtkQuery';
+import {useFetchSubjectsQuery} from '../../apis/api';
 import {USER_ID as userId, GRADE_ID as gradeId} from '@env';
 import FullScreenLoader from '../../components/FullScreenLoader';
 import ErrorView from '../../components/ErrorView';

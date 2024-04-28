@@ -4,6 +4,7 @@ import LocaleSwitcher from '../components/LocaleSwitcher';
 import Subjects from '../screens/Subjects';
 import Chapters from '../screens/Chapters';
 import Lessons from '../screens/Lessons';
+import LessonSeries from '../screens/LessonSeries';
 import {LessonType} from '../types/apiResponseTypes';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -15,6 +16,7 @@ export const routes = (
 		<Stack.Screen name="Subjects" component={Subjects} />
 		<Stack.Screen name="Chapters" component={Chapters} />
 		<Stack.Screen name="Lessons" component={Lessons} />
+		<Stack.Screen name="LessonSeries" component={LessonSeries} />
 	</Stack.Navigator>
 );
 
@@ -22,4 +24,5 @@ export type RootStackParamList = {
 	Subjects: undefined;
 	Chapters: {subjectId: string};
 	Lessons: {lessons: LessonType[]};
+	LessonSeries: {lessonId: string};
 };

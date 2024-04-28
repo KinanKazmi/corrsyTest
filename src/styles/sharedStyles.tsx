@@ -4,6 +4,12 @@ export const sharedStyles = StyleSheet.create({
 	flexOne: {
 		flex: 1,
 	},
+	alignCenter: {
+		alignItems: 'center',
+	},
+	justifyCenter: {
+		justifyContent: 'center',
+	},
 	flexColumn: {
 		flexDirection: 'column',
 	},

@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
 import rootReducer from './reducers';
-import {apis} from '../apis/rtkQuery';
+import {apis} from '../apis/api';
 import {setupListeners} from '@reduxjs/toolkit/query';
 
 const store = configureStore({
