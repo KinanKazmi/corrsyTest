@@ -84,7 +84,9 @@ export type LessonDetailResponseDataType = {
 
 export type LessonWidgetDataType = {
 	widgetType: string;
-	content: LessonWidgetContentType;
+	content?: LessonWidgetContentType;
+	videoWidgetContent?: VideoWidgetType;
+	mcqWidgetContent?: MCQWidgetType;
 	isActive: boolean;
 	_id: string;
 };
@@ -95,4 +97,28 @@ export type LessonWidgetContentType = {
 	image: string;
 	fileUrl: string;
 	description: string;
+};
+
+export type VideoWidgetType = {
+	title: string;
+	videoType: string;
+	videoUrl: string;
+	transcript: string;
+	voiceOverUrl: string;
+	introduction: string;
+	exercise: string;
+	example: string;
+	summary: string;
+	theory: string;
+	whatNext: string;
+	application: string;
+	questions: [];
+};
+
+export type MCQWidgetType = {
+	title: string;
+	questions: [];
+	totalMark: number;
+	passingMark: number;
+	numberOfQuestion: number;
 };

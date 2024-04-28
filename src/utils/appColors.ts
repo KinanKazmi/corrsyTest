@@ -1,5 +1,5 @@
-export const bgTop = 'skyblue';
-export const bgBottom = 'purple';
+export const bgTop = '#eceff1';
+export const bgBottom = '#263238';
 export const textError = 'red';
 export const transparentWhite = 'rgba(255,255,255,0.5)';
 export const loaderColor = 'skyblue';
