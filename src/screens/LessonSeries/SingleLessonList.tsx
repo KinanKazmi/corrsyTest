@@ -5,7 +5,6 @@ import {LessonWidgetDataType} from '../../types/apiResponseTypes';
 import SingleLessonBox from './SingleLessonBox';
 import Spacer from '../../components/Spacer';
 import * as Progress from 'react-native-progress';
-import {bgTop} from '../../utils/appColors';
 import {useMMKVString} from 'react-native-mmkv';
 
 const SingleLessonList = ({
@@ -51,7 +50,7 @@ const SingleLessonList = ({
 			<Spacer vertical />
 			<SingleLessonBox item={data[selectedWidget]} />
 			{data.length > 1 && (
-				<Button title={'Next'} onPress={() => changeWidget()} color={bgTop} />
+				<Button title={'Next'} onPress={() => changeWidget()} />
 			)}
 		</View>
 	);

@@ -4,7 +4,6 @@ import {Button, Text, View} from 'react-native';
 import SingleLessonList from './SingleLessonList';
 import {sharedStyles} from '../../styles/sharedStyles';
 import Spacer from '../../components/Spacer';
-import {bgTop} from '../../utils/appColors';
 
 const LessonWidget = ({data}: {data?: LessonDetailResponseDataType[]}) => {
 	const [selectedLesson, setSelectedLesson] = useState(0);
@@ -36,7 +35,7 @@ const LessonWidget = ({data}: {data?: LessonDetailResponseDataType[]}) => {
 				<SingleLessonList data={currentLesson?.widgets} lessonId={lessonId} />
 			</View>
 			{data.length > 1 && (
-				<Button title={'Next'} onPress={() => changeLesson()} color={bgTop} />
+				<Button title={'Next'} onPress={() => changeLesson()} />
 			)}
 		</View>
 	);
