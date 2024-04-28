@@ -24,7 +24,7 @@ const SingleLessonList = ({data}: {data: LessonWidgetDataType[]}) => {
 
 	return (
 		<View style={sharedStyles.flexOne}>
-			{total > 1 && (
+			{total > 1 && data.length > 1 && (
 				<Text style={sharedStyles.centerAlignedText}>
 					{`Progress ${current}/${total}`}
 				</Text>
@@ -34,7 +34,9 @@ const SingleLessonList = ({data}: {data: LessonWidgetDataType[]}) => {
 			</View>
 			<Spacer vertical />
 			<SingleLessonBox item={data[selectedWidget]} />
-			<Button title={'Next'} onPress={() => changeWidget()} color={bgTop} />
+			{data.length > 1 && (
+				<Button title={'Next'} onPress={() => changeWidget()} color={bgTop} />
+			)}
 		</View>
 	);
 };
