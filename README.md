@@ -1,3 +1,5 @@
+>**Note**: The code is formatted with 2 tab spaces indentation so it will appear weird on Github. Adding a sample screenshot in demo folder to show how it looks in VSCode.
+
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 Create a new project using the following command to make sure your environment is ready.
 ```bash
