@@ -8,7 +8,12 @@ const Video = ({data}: {data?: VideoWidgetType}) => {
 	const url = data?.videoUrl || '';
 	const urlPath = url.substring(url.lastIndexOf('v=') + 2, url.length);
 	return (
-		<View style={[sharedStyles.flexColumn, sharedStyles.flexOne]}>
+		<View
+			style={[
+				sharedStyles.flexColumn,
+				sharedStyles.flexOne,
+				sharedStyles.basicMargin,
+			]}>
 			<Text style={sharedStyles.centerAlignedText}>{data?.title}</Text>
 			<Text style={sharedStyles.centerAlignedText}>{data?.introduction}</Text>
 			{urlPath && <YoutubePlayer height={300} videoId={urlPath} />}

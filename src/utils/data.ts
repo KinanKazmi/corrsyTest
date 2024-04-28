@@ -7,3 +7,9 @@ export const languages = {
 	en: 'English',
 	ar: 'Arabic',
 };
+
+export enum widgetType {
+	textAndImages = 'textAndImages',
+	video = 'video',
+	multipleChoice = 'multipleChoice',
+}

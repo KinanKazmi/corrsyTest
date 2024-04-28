@@ -8,8 +8,24 @@ const MultipleChoice = ({data}: {data?: MCQWidgetType}) => {
 		return <></>;
 	}
 	return (
-		<View style={[sharedStyles.flexColumn, sharedStyles.flexOne]}>
-			<Text style={sharedStyles.centerAlignedText}>{JSON.stringify(data)}</Text>
+		<View
+			style={[
+				sharedStyles.flexColumn,
+				sharedStyles.flexOne,
+				sharedStyles.basicMargin,
+			]}>
+			<Text style={sharedStyles.centerAlignedText}>{data.title}</Text>
+			<Text style={sharedStyles.centerAlignedText}>
+				{`Total Questions: ${data.numberOfQuestion}`}
+			</Text>
+			<Text
+				style={
+					sharedStyles.centerAlignedText
+				}>{`Total Marks: ${data.totalMark}`}</Text>
+			<Text
+				style={
+					sharedStyles.centerAlignedText
+				}>{`Passng Marks: ${data.passingMark}`}</Text>
 		</View>
 	);
 };

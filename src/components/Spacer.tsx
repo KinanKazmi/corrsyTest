@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-const Spacer = ({vertical}: {vertical: boolean}) => {
+const Spacer = ({vertical}: {vertical?: boolean}) => {
 	return (
 		<View style={vertical ? styles.verticalSpace : styles.horizontalSpace} />
 	);

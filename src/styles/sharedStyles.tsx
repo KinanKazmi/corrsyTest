@@ -13,6 +13,9 @@ export const sharedStyles = StyleSheet.create({
 	flexColumn: {
 		flexDirection: 'column',
 	},
+	basicMargin: {
+		padding: 20,
+	},
 	listView: {
 		flex: 1,
 		alignItems: 'center',
