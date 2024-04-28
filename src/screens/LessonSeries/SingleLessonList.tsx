@@ -6,15 +6,31 @@ import SingleLessonBox from './SingleLessonBox';
 import Spacer from '../../components/Spacer';
 import * as Progress from 'react-native-progress';
 import {bgTop} from '../../utils/appColors';
+import {useMMKVString} from 'react-native-mmkv';
 
-const SingleLessonList = ({data}: {data: LessonWidgetDataType[]}) => {
-	const [selectedWidget, setSelectedWidget] = useState(0);
+const SingleLessonList = ({
+	data,
+	lessonId,
+}: {
+	data?: LessonWidgetDataType[];
+	lessonId: string;
+}) => {
+	const [lessonProgress, setLessonProgress] = useMMKVString(lessonId);
+	const [selectedWidget, setSelectedWidget] = useState(
+		parseInt(lessonProgress || '0', 10),
+	);
+
+	if (!data) {
+		return <></>;
+	}
 
 	const changeWidget = () => {
 		if (data[selectedWidget + 1]) {
 			setSelectedWidget(selectedWidget + 1);
+			setLessonProgress((selectedWidget + 1).toString());
 		} else {
 			setSelectedWidget(0);
+			setLessonProgress('0');
 		}
 	};
 

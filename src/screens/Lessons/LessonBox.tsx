@@ -5,6 +5,7 @@ import I18n from 'i18n-js';
 import LinearGradient from 'react-native-linear-gradient';
 import {sharedStyles} from '../../styles/sharedStyles';
 import {lessonButtonTop, lessonButtonBottom} from '../../utils/appColors';
+import {useMMKVString} from 'react-native-mmkv';
 
 const LessonBox = ({
 	item,
@@ -13,16 +14,21 @@ const LessonBox = ({
 	item: LessonType;
 	onPress: () => void;
 }) => {
+	const [lessonProgress] = useMMKVString(item._id);
+
 	const title = I18n.t(`${item.title}`);
 	const level = I18n.t(`${item.level}`);
-	const desc = I18n.t(`${item.shortDescription}`);
 	return (
 		<TouchableOpacity onPress={() => onPress()}>
 			<LinearGradient
 				colors={[lessonButtonTop, lessonButtonBottom]}
 				style={[sharedStyles.listItemContainer, sharedStyles.flexColumn]}>
 				<Text style={sharedStyles.centerAlignedText}>
-					{`${title}\n${level}\n${desc}`}
+					{`${title}\n\n${level}\n\n`}
+				</Text>
+				<Text style={sharedStyles.centerAlignedText}>
+					{lessonProgress &&
+						`Progress screen: ${parseInt(lessonProgress, 10) + 1}`}
 				</Text>
 			</LinearGradient>
 		</TouchableOpacity>

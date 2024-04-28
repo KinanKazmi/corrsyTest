@@ -8,6 +8,9 @@ import {bgTop} from '../../utils/appColors';
 
 const LessonWidget = ({data}: {data?: LessonDetailResponseDataType[]}) => {
 	const [selectedLesson, setSelectedLesson] = useState(0);
+	const currentLesson = data && data[selectedLesson];
+	const lessonId = currentLesson?._id || '';
+
 	if (!data) {
 		return <></>;
 	}
@@ -20,19 +23,17 @@ const LessonWidget = ({data}: {data?: LessonDetailResponseDataType[]}) => {
 		}
 	};
 
-	const currentLesson = data[selectedLesson];
-
 	return (
 		<View style={sharedStyles.flexOne}>
 			<Text style={sharedStyles.centerAlignedText}>
-				{`title: ${currentLesson.title}`}
+				{`title: ${currentLesson?.title}`}
 			</Text>
 			<Text style={sharedStyles.centerAlignedText}>
-				{currentLesson.longDescription}
+				{currentLesson?.longDescription}
 			</Text>
 			<Spacer vertical />
 			<View style={sharedStyles.flexOne}>
-				<SingleLessonList data={currentLesson.widgets} />
+				<SingleLessonList data={currentLesson?.widgets} lessonId={lessonId} />
 			</View>
 			{data.length > 1 && (
 				<Button title={'Next'} onPress={() => changeLesson()} color={bgTop} />
