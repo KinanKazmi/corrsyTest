@@ -5,10 +5,14 @@ Create a new project using the following command to make sure your environment i
 ```bash
 npx react-native@latest init test
 ```
-Once ready, clone the git repo into a new folder and run the following command in your terminal to get all dependencies.
+Once ready, clone the git repo into a new folder and run the following commands in your terminal to get all dependencies.
 
 ```bash
 npm install
+```
+
+```bash
+npx pod-install
 ```
 
 ## Step 1: Start the Metro Server
